@@ -1,0 +1,6 @@
+# RAG prep outputs (generated)
+data/**
+!data/raw/
+!data/raw/**
+# optional: keep placeholder files
+!data/**/.gitkeep
