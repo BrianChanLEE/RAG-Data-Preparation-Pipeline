@@ -6,8 +6,8 @@
 logs/**
 temp_*/**
 
-# ✅ data 아래 모든 파일은 무시
+
 data/**/*
 
-# ✅ 단, 폴더 유지용 .gitkeep만 예외로 추적 허용
+
 !data/**/.gitkeep
