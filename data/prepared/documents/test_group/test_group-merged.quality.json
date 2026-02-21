@@ -1,0 +1,19 @@
+{
+  "doc_id": "test_group-merged",
+  "group_id": "test_group",
+  "source_type": "xml",
+  "total_chars": 38,
+  "valid_chars": 38,
+  "replacement_char_ratio": 0.0,
+  "header_footer_repeat_ratio": 0.0,
+  "section_detect_rate": 1.0,
+  "chunk_count": 2,
+  "short_chunk_ratio": 1.0,
+  "overlap_ok_ratio": 0.0,
+  "sentence_boundary_ok_ratio": 0.0,
+  "quality_score": 70.0,
+  "decision": "PASS",
+  "reasons": [
+    "Too many short chunks: 1.00"
+  ]
+}

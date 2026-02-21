@@ -1,0 +1,33 @@
+{
+  "run_id": "c09e5b4f",
+  "schema_version": "1.0.0",
+  "started_at": "2026-02-21T11:51:14.525380",
+  "finished_at": "2026-02-21T11:51:14.648243",
+  "git_commit": null,
+  "requirements_hash": null,
+  "config": {
+    "concurrency": 2,
+    "merge_group": true,
+    "quality_gate": true,
+    "dedupe": true,
+    "dedupe_scope": "doc",
+    "pii_mask": true,
+    "executor_type": "thread",
+    "max_retries": 1,
+    "retry_backoff_ms": 2000,
+    "min_chars": 300,
+    "retry_quarantine": false
+  },
+  "host": {
+    "os": "Darwin",
+    "python_version": "3.11.13",
+    "cpu_count": 10
+  },
+  "stats": {
+    "processed": 2,
+    "passed": 1,
+    "review": 1,
+    "quarantined": 0,
+    "failed": 0
+  }
+}

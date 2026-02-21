@@ -1,0 +1,18 @@
+{
+  "doc_id": "02-20f8a6a76982",
+  "filename": "02.xml",
+  "type": "xml",
+  "sha256": "20f8a6a76982dd9b6872e677ae603db2c6b8cfbf4dacd17f35b8ea1082fb6f62",
+  "status": "SUCCESS",
+  "failed_reason": null,
+  "pages": null,
+  "sections": null,
+  "total_chars": 0,
+  "chunks": 1,
+  "outputs": {
+    "extracted": "/Users/youngchanlee/workFace/00_05_RAG_DATA/data/extracted/02-20f8a6a76982.xml.json",
+    "normalized": "/Users/youngchanlee/workFace/00_05_RAG_DATA/data/normalized/02-20f8a6a76982.normalized.json",
+    "document": "/Users/youngchanlee/workFace/00_05_RAG_DATA/data/prepared/documents/test_group/02-20f8a6a76982.document.json",
+    "chunks": "/Users/youngchanlee/workFace/00_05_RAG_DATA/data/prepared/chunks/test_group/02-20f8a6a76982.chunks.jsonl"
+  }
+}

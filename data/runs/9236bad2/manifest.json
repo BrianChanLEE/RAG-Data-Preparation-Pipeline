@@ -1,0 +1,29 @@
+{
+  "run_id": "9236bad2",
+  "schema_version": "1.0.0",
+  "started_at": "2026-02-21T11:46:59.648611",
+  "finished_at": "2026-02-21T11:46:59.974566",
+  "git_commit": null,
+  "requirements_hash": null,
+  "config": {
+    "concurrency": 2,
+    "merge_group": true,
+    "quality_gate": true,
+    "dedupe": true,
+    "dedupe_scope": "doc",
+    "min_chars": 300,
+    "retry_quarantine": false
+  },
+  "host": {
+    "os": "Darwin",
+    "python_version": "3.11.13",
+    "cpu_count": 10
+  },
+  "stats": {
+    "processed": 2,
+    "passed": 1,
+    "review": 1,
+    "quarantined": 0,
+    "failed": 0
+  }
+}

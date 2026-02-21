@@ -1,0 +1,7 @@
+pymupdf==1.25.3
+pydantic
+python-json-logger
+pandas
+tqdm
+beautifulsoup4
+lxml

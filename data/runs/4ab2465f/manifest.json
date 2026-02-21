@@ -1,0 +1,27 @@
+{
+  "run_id": "4ab2465f",
+  "schema_version": "1.0.0",
+  "started_at": "2026-02-21T11:39:35.327719",
+  "finished_at": "2026-02-21T11:39:35.689264",
+  "git_commit": null,
+  "requirements_hash": null,
+  "config": {
+    "concurrency": 2,
+    "merge_group": true,
+    "quality_gate": true,
+    "min_chars": 300,
+    "retry_quarantine": false
+  },
+  "host": {
+    "os": "Darwin",
+    "python_version": "3.11.13",
+    "cpu_count": 10
+  },
+  "stats": {
+    "processed": 2,
+    "passed": 1,
+    "review": 1,
+    "quarantined": 0,
+    "failed": 0
+  }
+}

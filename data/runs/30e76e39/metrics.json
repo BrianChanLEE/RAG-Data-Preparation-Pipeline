@@ -1,0 +1,8 @@
+{
+  "run_id": "30e76e39",
+  "total_duration_sec": 0.396403,
+  "docs_processed": 2,
+  "quarantine_rate": 0.0,
+  "duration_p95_ms": 99,
+  "duration_mean_ms": 98
+}

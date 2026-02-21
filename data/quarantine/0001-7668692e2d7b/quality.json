@@ -1,0 +1,19 @@
+{
+  "doc_id": "0001-7668692e2d7b",
+  "group_id": null,
+  "source_type": "xml",
+  "total_chars": 0,
+  "valid_chars": 0,
+  "replacement_char_ratio": 0.0,
+  "header_footer_repeat_ratio": 0.0,
+  "section_detect_rate": 0.0,
+  "chunk_count": 0,
+  "short_chunk_ratio": 0.0,
+  "overlap_ok_ratio": 0.0,
+  "sentence_boundary_ok_ratio": 0.0,
+  "quality_score": 0.0,
+  "decision": "QUARANTINE",
+  "reasons": [
+    "Missing required output files"
+  ]
+}

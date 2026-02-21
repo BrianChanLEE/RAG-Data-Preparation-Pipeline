@@ -1,0 +1,3 @@
+﻿doc_id,filename,type,sha256,status,failed_reason,pages,sections,total_chars,chunks,duration_ms,out_extracted,out_normalized,out_document,out_chunks
+test_group-merged,test_group_merged.xml,xml,8695fa33bb361deb53528ffab48b51a75385d7f41245939312d47b37ed69e48b,FAILED,UNHANDLED_ERROR,,,0,0,0,,,,
+ungrouped-merged,ungrouped_merged.xml,xml,7668692e2d7ba82ee176088a995f935318f2ddc61942ca52827b0eb31bd13084,FAILED,UNHANDLED_ERROR,,,0,0,0,,,,

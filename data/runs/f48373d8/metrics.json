@@ -1,0 +1,8 @@
+{
+  "run_id": "f48373d8",
+  "total_duration_sec": 0.128414,
+  "docs_processed": 2,
+  "quarantine_rate": 0.0,
+  "duration_p95_ms": 113,
+  "duration_mean_ms": 113
+}

@@ -1,0 +1,50 @@
+{
+  "run_id": "9236bad2",
+  "started_at": "2026-02-21T11:46:59.648611",
+  "ended_at": "2026-02-21T11:47:00.353279",
+  "input_count": 2,
+  "success_count": 1,
+  "skipped_count": 0,
+  "failed_count": 0,
+  "fail_reasons": {},
+  "docs": [
+    {
+      "doc_id": "test_group-merged",
+      "filename": "test_group_merged.xml",
+      "type": "xml",
+      "sha256": "8695fa33bb361deb53528ffab48b51a75385d7f41245939312d47b37ed69e48b",
+      "status": "SUCCESS",
+      "failed_reason": null,
+      "pages": null,
+      "sections": null,
+      "total_chars": 0,
+      "chunks": 2,
+      "duration_ms": 88,
+      "outputs": {
+        "extracted": "/Users/youngchanlee/workFace/00_05_RAG_DATA/data/extracted/test_group-merged.xml.json",
+        "normalized": "/Users/youngchanlee/workFace/00_05_RAG_DATA/data/normalized/test_group-merged.normalized.json",
+        "document": "/Users/youngchanlee/workFace/00_05_RAG_DATA/data/prepared/documents/test_group/test_group-merged.document.json",
+        "chunks": "/Users/youngchanlee/workFace/00_05_RAG_DATA/data/prepared/chunks/test_group/test_group-merged.chunks.jsonl"
+      }
+    },
+    {
+      "doc_id": "ungrouped-merged",
+      "filename": "ungrouped_merged.xml",
+      "type": "xml",
+      "sha256": "7668692e2d7ba82ee176088a995f935318f2ddc61942ca52827b0eb31bd13084",
+      "status": "REVIEW",
+      "failed_reason": "Too many short chunks: 0.94",
+      "pages": null,
+      "sections": null,
+      "total_chars": 0,
+      "chunks": 31,
+      "duration_ms": 94,
+      "outputs": {
+        "extracted": "/Users/youngchanlee/workFace/00_05_RAG_DATA/data/extracted/ungrouped-merged.xml.json",
+        "normalized": "/Users/youngchanlee/workFace/00_05_RAG_DATA/data/normalized/ungrouped-merged.normalized.json",
+        "document": "/Users/youngchanlee/workFace/00_05_RAG_DATA/data/prepared/documents/ungrouped/ungrouped-merged.document.json",
+        "chunks": "/Users/youngchanlee/workFace/00_05_RAG_DATA/data/prepared/chunks/ungrouped/ungrouped-merged.chunks.jsonl"
+      }
+    }
+  ]
+}
