@@ -2,7 +2,7 @@
 
 본 문서는 RAG(Retrieval-Augmented Generation) 시스템 구축을 위해 원본 문서를 가공하는 파이프라인의 실행 방법과 처리 흐름, 그리고 최종 산출물의 활용 방법을 안내합니다.
 
-## 🚀 파이프라인 실행 방법
+##  파이프라인 실행 방법
 
 터미널에서 프로젝트 최상위 경로에 위치한 상태로 아래의 명령어를 실행합니다.
 
@@ -19,31 +19,31 @@ python -m ragprep.prepare --input data/raw --out data --concurrency 4
 
 ---
 
-## 📊 파이프라인 처리 흐름도 (Data Flow)
+##  파이프라인 처리 흐름도 (Data Flow)
 
 파이프라인이 실행되면 입력된 데이터는 다음과 같이 변환되며 각 폴더로 흘러갑니다.
 
 ```mermaid
 graph TD
-    RAW["📁 data/raw/ <br/>원본 PDF, JWPUB, XML 등"] -->|"python -m ragprep.prepare"| ROUTER{"파이프라인 라우터"}
+    RAW[" data/raw/ <br/>원본 PDF, JWPUB, XML 등"] -->|"python -m ragprep.prepare"| ROUTER{"파이프라인 라우터"}
     
-    ROUTER -->|"분석 불가능 / 미지원 확장자"| QUAR["⚠️ data/quarantine/<br/>격리 폴더"]
-    ROUTER -->|"정상 문서"| EXTRACT["📁 data/extracted/<br/>단순 원시 데이터"]
+    ROUTER -->|"분석 불가능 / 미지원 확장자"| QUAR[" data/quarantine/<br/>격리 폴더"]
+    ROUTER -->|"정상 문서"| EXTRACT[" data/extracted/<br/>단순 원시 데이터"]
     
-    EXTRACT -->|"PDF 좌표/폰트 딕셔너리 추출 등"| NORMALIZE["📁 data/normalized/<br/>정제 데이터"]
+    EXTRACT -->|"PDF 좌표/폰트 딕셔너리 추출 등"| NORMALIZE[" data/normalized/<br/>정제 데이터"]
     
-    NORMALIZE -->|"머리말/꼬리말 제거, 특수문자 정리"| DOCUMENT["📁 data/prepared/documents/<br/>구조화된 문서"]
+    NORMALIZE -->|"머리말/꼬리말 제거, 특수문자 정리"| DOCUMENT[" data/prepared/documents/<br/>구조화된 문서"]
     
-    DOCUMENT -->|"폰트 크기 식별, 섹션/챕터 분할"| CHUNKS["📁 data/prepared/chunks/<br/>최종 텍스트 조각"]
+    DOCUMENT -->|"폰트 크기 식별, 섹션/챕터 분할"| CHUNKS[" data/prepared/chunks/<br/>최종 텍스트 조각"]
     
-    CHUNKS -->|"문장 단위 1000자 병합 및 조각화<br/>(파일명 기반 자동 분류)"| RAG(("🤖 RAG 시스템<br/>벡터 DB 연동"))
+    CHUNKS -->|"문장 단위 1000자 병합 및 조각화<br/>(파일명 기반 자동 분류)"| RAG((" RAG 시스템<br/>벡터 DB 연동"))
     
-    ROUTER -.->|"전체 파일 처리 통계 기록"| REPORT["📊 data/prepared/reports/<br/>성공/실패 통계 CSV"]
+    ROUTER -.->|"전체 파일 처리 통계 기록"| REPORT[" data/prepared/reports/<br/>성공/실패 통계 CSV"]
 ```
 
 ---
 
-## 📂 출력 폴더 상세 안내 (어떤 데이터가 어떻게 나오는가?)
+##  출력 폴더 상세 안내 (어떤 데이터가 어떻게 나오는가?)
 
 명령어가 성공적으로 실행되면 `--out` 으로 지정한 폴더 내부에 다음과 같은 디렉토리 구조가 생성됩니다.
 
@@ -71,12 +71,12 @@ graph TD
 
 ---
 
-## 🎯 활용 안내: RAG 시스템 (Vector DB) 구축 시 사용할 파일
+##  활용 안내: RAG 시스템 (Vector DB) 구축 시 사용할 파일
 
 가장 핵심이 되는 최종 산출물은 **딱 한 폴더**에 모입니다.
 
-👉 사용해야 할 최종 폴더: **`data/prepared/chunks/`**  
-👉 사용해야 할 파일 형식: **`*.chunks.jsonl`**
+ 사용해야 할 최종 폴더: **`data/prepared/chunks/`**  
+ 사용해야 할 파일 형식: **`*.chunks.jsonl`**
 
 ### 자동 폴더 분류 (Hierarchical Routing)
 

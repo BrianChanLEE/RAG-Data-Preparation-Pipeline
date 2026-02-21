@@ -3,7 +3,7 @@
   <em>Enterprise-Grade On-Premises Batch Data Processing for RAG Systems</em>
 </p>
 
-## 📌 1. 프로젝트 정체성 (Project Identity)
+##  1. 프로젝트 정체성 (Project Identity)
 
 **"왜 이 프로젝트가 존재하는가?"**
 대규모 생성형 AI(GenAI) 및 검색 증강 생성(RAG) 시스템의 성능은 전적으로 '데이터의 품질'에 달려 있습니다. 하지만 기존의 단순한 파싱 스크립트들은 수십만 건의 대규모 엔터프라이즈 환경에서 데이터 유실, 중복 인덱싱, 개인정보 유출, 파이프라인 중단 등의 치명적인 문제를 야기합니다. 
@@ -12,7 +12,7 @@
 
 ---
 
-## 🏗 2. 시스템 개요 (System Overview)
+##  2. 시스템 개요 (System Overview)
 
 본 시스템은 상호 보완적인 6개의 핵심 엔터프라이즈 모듈로 결합되어 있습니다.
 
@@ -44,7 +44,7 @@ mindmap
 
 ---
 
-## 🔄 3. 파이프라인 전체 흐름 (Pipeline Flow)
+##  3. 파이프라인 전체 흐름 (Pipeline Flow)
 
 ```mermaid
 flowchart TD
@@ -70,7 +70,7 @@ flowchart TD
 
 ---
 
-## 💎 4. 엔터프라이즈 특성 (Enterprise Characteristics)
+##  4. 엔터프라이즈 특성 (Enterprise Characteristics)
 
 1. **멱등성 (Idempotency)**: 파이프라인을 여러 번 재실행해도 기존 성공 마커(`#success.json`)를 판별하여 스킵하므로 시스템 상태의 일관성을 100% 보장합니다.
 2. **재현성 (Reproducibility)**: 실행할 때마다 `manifest.json`이 생성되어 당시의 Git Commit, 파라미터(Config), OS 환경 등 실행 콘텍스트가 박제됩니다.
@@ -80,7 +80,7 @@ flowchart TD
 
 ---
 
-## 🚀 5. 설치 가이드 (Quick Start)
+##  5. 설치 가이드 (Quick Start)
 
 ### Requirements
 - OS: MAC / Linux (온프레미스 권장)
@@ -113,7 +113,7 @@ python -m ragprep.prepare \
 
 ---
 
-## 🛠 6. 운영 시나리오 예시
+##  6. 운영 시나리오 예시
 
 - **대규모 문서 일괄 처리 (`--merge-group`)**: 수만 개의 분산된 `.xml`, `.pdf` 파일이 동일한 하위 디렉토리에 속해 있을 경우, 파이프라인은 이들을 단일 문서의 컬렉션으로 논리적 병합하여 컨텍스트 단절 없이 청킹합니다.
 - **문서 개정 (Revision) 발생 시**: 수정된 문서가 재인입되면 `structure.py`에서 기존 SHA256 해시와 비교 후, 내용이 변경되었을 때만 `revision`을 +1 증가시키고 기존 문서는 `revisions/` 폴더로 백업합니다.
@@ -121,7 +121,7 @@ python -m ragprep.prepare \
 
 ---
 
-## 📂 7. 산출물 디렉토리 구조 (Directory Output)
+##  7. 산출물 디렉토리 구조 (Directory Output)
 
 파이프라인 실행 후 보장되는 출력 디렉토리 트리는 다음과 같습니다.
 
@@ -149,7 +149,7 @@ data/
 
 ---
 
-## 🛡 8. 배포 및 호환성 (Compatibility & Stability)
+##  8. 배포 및 호환성 (Compatibility & Stability)
 
 이 파이프라인 코드는 완전한 **Zero-external-dependency (외부 DB/큐 인프라 미사용)** 배치가 가능하도록 순수 폴더 구조와 파이썬 언어로 아키텍처링 되었습니다. 
 - 본 프로젝트의 `README.md` 및 `docs/` 폴더 내 모든 문서는 GitHub Markdown 규격을 철저히 준수합니다.

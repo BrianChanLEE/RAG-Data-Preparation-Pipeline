@@ -28,13 +28,13 @@ Leveraging `argparse`, system integrators possess deep capabilities adjusting mu
 
 ## 2. Command Line Playbooks
 
-**✅ Debug Sandbox Isolation (Minimal Concurrency)**  
+** Debug Sandbox Isolation (Minimal Concurrency)**  
 (Optimally suited for low-memory micro-instances analyzing stack traces)
 ```bash
 python -m ragprep.prepare --force --concurrency 1 --executor thread --pii-mask
 ```
 
-**✅ Global Bible/Journal Data Assimilation Strategy**  
+** Global Bible/Journal Data Assimilation Strategy**  
 (Massive document pools needing context grouping and severe group-level Deduplication filters)
 ```bash
 python -m ragprep.prepare --merge-group true --dedupe-scope group

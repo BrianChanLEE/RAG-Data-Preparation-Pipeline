@@ -28,13 +28,13 @@
 
 ## 2. 사용 사례 커맨드 (Usage Scenarios)
 
-**✅ 캐시 무효화 및 단일 프로세스 집중**  
+** 캐시 무효화 및 단일 프로세스 집중**  
 (디버깅이나 메모리가 부족한 소형 배치 서버에서 돌릴 때)
 ```bash
 python -m ragprep.prepare --force --concurrency 1 --executor thread --pii-mask
 ```
 
-**✅ 다수의 XML 파편들을 하나의 거대 문서로 압축할 때**  
+** 다수의 XML 파편들을 하나의 거대 문서로 압축할 때**  
 (예: 수천 개의 개별 장/절 문서를 성경 한 권 컨텍스트에 담고 싶을 때)
 ```bash
 python -m ragprep.prepare --merge-group true --dedupe-scope group

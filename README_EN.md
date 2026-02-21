@@ -3,7 +3,7 @@
   <em>Enterprise-Grade On-Premises Batch Data Processing for RAG Systems</em>
 </p>
 
-## 📌 1. Project Identity
+##  1. Project Identity
 
 **"Why does this project exist?"**
 The performance of massive Generative AI and Retrieval-Augmented Generation (RAG) systems depends entirely on the 'Quality of Data'. However, simple parsing scripts used traditionally cause fatal issues in enterprise environments with hundreds of thousands of documents, such as data loss, duplicate indexing, PII exposure, and pipeline interruptions.
@@ -12,7 +12,7 @@ This pipeline goes far beyond simple data extraction. It is an **Enterprise-Grad
 
 ---
 
-## 🏗 2. System Overview
+##  2. System Overview
 
 The system is tightly coupled with 6 core enterprise modules.
 
@@ -44,7 +44,7 @@ These domains interact symbiotically to produce flawless RAG text. (e.g., During
 
 ---
 
-## 🔄 3. Pipeline Flow
+##  3. Pipeline Flow
 
 ```mermaid
 flowchart TD
@@ -70,7 +70,7 @@ flowchart TD
 
 ---
 
-## 💎 4. Enterprise Characteristics
+##  4. Enterprise Characteristics
 
 1. **Idempotency**: Rerunning the pipeline will reliably skip existing verified successful outputs (`#success.json`), strictly guaranteeing 100% state consistency.
 2. **Reproducibility**: A `manifest.json` is generated for every run, permanently recording the execution context such as the Git Commit, config parameters, and OS environment.
@@ -80,7 +80,7 @@ flowchart TD
 
 ---
 
-## 🚀 5. Quick Start
+##  5. Quick Start
 
 ### Requirements
 - OS: MAC / Linux (On-Premises Recommended)
@@ -113,7 +113,7 @@ python -m ragprep.prepare \
 
 ---
 
-## 🛠 6. Operating Scenarios
+##  6. Operating Scenarios
 
 - **Massive Document Grouping (`--merge-group`)**: When tens of thousands of fragmented `.xml` or `.pdf` files belong to the same subdirectory, the pipeline logically merges them into a single coherent document collection, retaining context during chunking.
 - **Handling Revisions**: When a modified document is reinserted, `structure.py` compares the SHA256 hash. If changed, the `revision` increments by +1, and the previous version is backed up into the `revisions/` archive.
@@ -121,7 +121,7 @@ python -m ragprep.prepare \
 
 ---
 
-## 📂 7. Directory Output Structure
+##  7. Directory Output Structure
 
 The guaranteed output directory tree after processing:
 
@@ -149,7 +149,7 @@ data/
 
 ---
 
-## 🛡 8. Deployment and Compatibility
+##  8. Deployment and Compatibility
 
 This pipeline is architected purely in Python and file structures, enabling completely **Zero-external-dependency (No separate external DB/Queue infrastructure required)** batch deployments.
 - All documents in the `README.md` and `docs/` folder strictly adhere to GitHub Markdown specifications.
